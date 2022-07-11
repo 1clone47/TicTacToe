@@ -143,9 +143,20 @@ def block_user(field):
         elif field[9] == player_1 and field[1] == player_1:
             return 5
         else:
-            move = random.randint(1, 9)
-            if field[move] == "":
-                return move
+            if field[5] == "":
+                return 5
+            elif field[1] == "":
+                return 1
+            elif field[3] == "":
+                return 3
+            elif field[7] == "":
+                return 7
+            elif field[9] == "":
+                return 9
+            else:
+                move = random.randint(1, 9)
+                if field[move] == "":
+                    return move
 
 
 def check_for_win(dict, moves):
