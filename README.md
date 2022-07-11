@@ -1,2 +1,2 @@
 # TicTacToe
-First TicTacToe Game ive created
+First TicTacToe Game i've created
