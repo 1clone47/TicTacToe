@@ -122,48 +122,68 @@ def block_user(field):
                 return 1
 
         elif field[6] == player_1 and field[3] == player_1:
-            return 9
+            if field[9] == "":
+                return 9
         elif field[6] == player_1 and field[9] == player_1:
-            return 3
+            if field[3] == "":
+                return 3
         elif field[6] == player_1 and field[5] == player_1:
-            return 4
+            if field[4] == "":
+                return 4
         elif field[6] == player_1 and field[4] == player_1:
-            return 5
+            if field[5] == "":
+                return 5
 
         elif field[7] == player_1 and field[8] == player_1:
-            return 9
+            if field[9] == "":
+                return 9
         elif field[7] == player_1 and field[9] == player_1:
-            return 8
+            if field[8] == "":
+                return 8
         elif field[7] == player_1 and field[5] == player_1:
-            return 3
+            if field[3] == "":
+                return 3
         elif field[7] == player_1 and field[3] == player_1:
-            return 5
+            if field[5] == "":
+                return 5
         elif field[7] == player_1 and field[4] == player_1:
-            return 1
+            if filed[1] == "":
+                return 1
         elif field[7] == player_1 and field[1] == player_1:
-            return 4
+            if field[4] == "":
+                return 4
 
         elif field[8] == player_1 and field[7] == player_1:
-            return 9
+            if field[9] == "":
+                return 9
         elif field[8] == player_1 and field[9] == player_1:
-            return 7
+            if field[7] == "":
+                return 7
         elif field[8] == player_1 and field[5] == player_1:
-            return 2
+            if field[2] == "":
+                return 2
         elif field[8] == player_1 and field[2] == player_1:
-            return 5
+            if field[5] == "":
+                return 5
 
         elif field[9] == player_1 and field[7] == player_1:
-            return 8
+            if field[8] == "":
+                return 8
         elif field[9] == player_1 and field[8] == player_1:
-            return 7
+            if field[7] == "":
+                return 7
         elif field[9] == player_1 and field[6] == player_1:
-            return 3
+            if field[3] == "":
+                return 3
         elif field[9] == player_1 and field[3] == player_1:
-            return 6
+            if field[6] == "":
+                return 6
         elif field[9] == player_1 and field[5] == player_1:
-            return 1
+            if field[1] == "":
+                return 1
         elif field[9] == player_1 and field[1] == player_1:
-            return 5
+            if field[5] == "":
+                return 5
         else:
             if field[5] == "":
                 return 5
