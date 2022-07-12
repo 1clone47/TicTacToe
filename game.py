@@ -1,9 +1,3 @@
-# A game TicTac Toe
-# Author: Iclone47
-# Version: 0.0.7
-# Release: 27.06.2022
-# Updated: 09.07.2022
-
 import random
 
 field_numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
