@@ -1,6 +1,7 @@
 import sys
 import random
 
+ADMIN_PASSWORD = "admin"
 PLAYER_TOKEN = 'X'
 COMPUTER_TOKEN = 'O'
 EMPTY = ' '
@@ -27,7 +28,7 @@ def play():
             print(">>> Draw! <<<")
             with open("log.txt", "a") as log:
                 log.write(f"\n--> Draw!")
-            return False
+            sys.exit(0)
         if turn == PLAYER_TOKEN:
             print("It's your turn! " + turn + ". Please choose a field position: ")
         if turn == COMPUTER_TOKEN:
@@ -88,6 +89,10 @@ def input_check(insert, turn):
         sys.exit(0)
     elif insert.lower() == "clear":
         clear_logs()
+    elif insert.lower() == "admin":
+        admin_login = input("Bitte geben sie das Password für Admin ein: ")
+        if admin_login == ADMIN_PASSWORD:
+            print("$ Welcome Admin...")
     try:
         int(insert)
     except ValueError:
