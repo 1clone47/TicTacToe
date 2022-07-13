@@ -23,7 +23,9 @@ Steps to get the game working on your computer:
 ### Commands
 There are the "hidden" commands in the game:
 ```
-$ clear       # Clears the `log.txt` 
+$ clear       # Clears the `log.txt`
+$ end         # Ends the current game
+$ admin-login # Enable the admin login
 ```
 
 ### Upcoming Features                                                          
