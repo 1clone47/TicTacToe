@@ -26,8 +26,7 @@ There are the "hidden" commands in the game:
 $ clear       # Clears the `log.txt` 
 ```
 
-### Upcoming Features
-* Computer starts attacking
+### Upcoming Features                                                          
 * GUI for easier Input
 * Single- and Multiplayer mode
 * Singleplayer:
