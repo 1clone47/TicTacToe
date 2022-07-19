@@ -18,8 +18,8 @@ def set_computer_token(player_token):
 
 
 ADMIN_PASSWORD = "admin"
-PLAYER_TOKEN = "O"
-COMPUTER_TOKEN = "X"
+PLAYER_TOKEN = set_token()
+COMPUTER_TOKEN = set_computer_token(PLAYER_TOKEN)
 EMPTY = ' '
 FIELD = {'7': EMPTY, '8': EMPTY, '9': EMPTY,
          '4': EMPTY, '5': EMPTY, '6': EMPTY,
