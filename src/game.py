@@ -1,7 +1,7 @@
+
 from parameters import FIELD, EMPTY, ADMIN_PASSWORD, COMPUTER_TOKEN, PLAYER_TOKEN
 import sys
 import random
-
 
 def playing_field(board):
     print(board['7'] + '|' + board['8'] + '|' + board['9'])
@@ -26,6 +26,7 @@ def play():
             print("It's your turn! Please choose a field position: ")
         if turn == COMPUTER_TOKEN:
             move = computer_move(FIELD)
+
         else:
             move = input()
             if input_check(move, turn):
