@@ -1,14 +1,7 @@
+
+from parameters import FIELD, EMPTY, ADMIN_PASSWORD, COMPUTER_TOKEN, PLAYER_TOKEN
 import sys
 import random
-
-ADMIN_PASSWORD = "admin"
-PLAYER_TOKEN = 'X'
-COMPUTER_TOKEN = 'O'
-EMPTY = ' '
-field = {'7': EMPTY, '8': EMPTY, '9': EMPTY,
-         '4': EMPTY, '5': EMPTY, '6': EMPTY,
-         '1': EMPTY, '2': EMPTY, '3': EMPTY}
-
 
 def playing_field(board):
     print(board['7'] + '|' + board['8'] + '|' + board['9'])
@@ -22,31 +15,32 @@ def play():
     turn = PLAYER_TOKEN
 
     while True:
-        available = possible_moves(field)
-        playing_field(field)
+        available = possible_moves(FIELD)
+        playing_field(FIELD)
         if not available:
             print(">>> Draw! <<<")
             with open("log.txt", "a") as log:
                 log.write(f"\n--> Draw!")
             sys.exit(0)
         if turn == PLAYER_TOKEN:
-            print("It's your turn! " + turn + ". Please choose a field position: ")
+            print("It's your turn! Please choose a field position: ")
         if turn == COMPUTER_TOKEN:
-            move = computer_move(field)
+            move = computer_move(FIELD)
+
         else:
             move = input()
             if input_check(move, turn):
                 continue
-        if field[move] == EMPTY:
-            field[move] = turn
+        if FIELD[move] == EMPTY:
+            FIELD[move] = turn
             print(f"--> Player {turn} has picked {move}...")
             with open("log.txt", "a") as log:
                 log.write(f"--> {turn} has picked {move}...\n")
         else:
             print("This field is already occupied.\nPlease choose another field.")
             continue
-        if check_win(field):
-            playing_field(field)
+        if check_win(FIELD):
+            playing_field(FIELD)
             print(f">>>> {turn} has won! <<<<")
             with open("log.txt", "a") as log:
                 log.write(f"\n--> {turn} has won! \n-->Moves needed: {move}")
