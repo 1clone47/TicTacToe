@@ -33,7 +33,7 @@ $ admin-login # Enable the admin login
 * Single- and Multiplayer mode
 * Singleplayer:
   * Choose whether the player or the computer starts
-  * Choose whether the player wants to be "x" or "o"
+  * ~~Choose whether the player wants to be "x" or "o"~~
   * Shortcuts to ent or restart the game
 * Multiplayer:
   * Choose which player starts (maybe a coin flip ;))
